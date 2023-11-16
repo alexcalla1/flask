@@ -1,5 +1,5 @@
 from flask import Flask
-from app.routes import bp as routes_bp  # Importa directamente el Blueprint
+from app.routes import predicciones_bp
 
 def create_app():
     app = Flask(__name__)
@@ -8,6 +8,6 @@ def create_app():
     app.config.from_object('config.Config')
 
     # Registra el Blueprint
-    app.register_blueprint(routes_bp)
+    app.register_blueprint(predicciones_bp)
 
     return app

@@ -1,13 +1,13 @@
 from flask import Blueprint, request, jsonify
 import joblib
 
-bp = Blueprint('routes', __name__)
+predicciones_bp = Blueprint('predicciones', __name__)
 
 # Cargar el modelo entrenado
 modelo_rf = joblib.load('modelo_random_forest.joblib')
 
 # Endpoint para realizar predicciones
-@bp.route('/predict', methods=['POST'])
+@predicciones_bp.route('/predict', methods=['POST'])
 def predict():
     try:
         # Obtener datos del cuerpo de la solicitud
@@ -20,4 +20,3 @@ def predict():
         return jsonify({'prediccion': int(predicciones[0])})
     except Exception as e:
         return jsonify({'error': str(e)})
-
