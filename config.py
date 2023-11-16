@@ -1,2 +1,2 @@
-# config.py
-DEBUG = True  # Puedes cambiar a False en producción
+class Config:
+	DEBUG = True  # Puedes cambiar a False en producción
