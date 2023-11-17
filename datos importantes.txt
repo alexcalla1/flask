@@ -1,0 +1,10 @@
+
+local
+curl -X POST -H "Content-Type: application/json" -d "{\"datos\": [7,19,1.15,54,14.37,23,350,1.04,74]}" http://127.0.0.1:5000/predict
+
+en pythonanywhere
+curl -X POST -H "Content-Type: application/json" -d "{\"datos\": [6,22,1.15,54,16.64,59,936,2.69,75]}" http://alexandercalla2.pythonanywhere.com/predict
+
+
+mkvirtualenv --python=/usr/bin/python3.8 myenv  # Ejemplo, ajusta según tu versión de Python
+workon myenv
